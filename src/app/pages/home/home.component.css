@@ -1,0 +1,4 @@
+.imagen-perfil{
+    -webkit-mask-image: linear-gradient(black 60%, transparent);
+    mask-image: linear-gradient(black 60%, transparent);
+}

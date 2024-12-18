@@ -1,0 +1,46 @@
+<div class="fixed w-full z-50 flex flex-row justify-between items-center py-4 px-8 border-b border-gray-400 bg-[#121212] max-w-screen-2xl m-auto">
+    <div class="">
+        <h1 class="text-3xl font-thin cursor-pointer" [routerLink]="['/']">PaulDev</h1>
+    </div>
+    <div class="lg:hidden">
+        <!-- Botón de menú hamburguesa -->
+        <button (click)="isMenuOpen = !isMenuOpen" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+    <div class="hidden lg:flex">
+        <ul class="flex flex-row gap-10 justify-center items-center">
+            <li class="cursor-pointer" [routerLink]="['/']">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                  </svg>
+            </li>
+            <li class="cursor-pointer" [routerLink]="['/projects']">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 12v1h4v-1m4 7H6a1 1 0 0 1-1-1V9h14v9a1 1 0 0 1-1 1ZM4 5h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
+                  </svg>
+            </li>
+        </ul>
+    </div>
+    @if(isMenuOpen){
+        <div class="absolute top-16 left-0 z-50 w-full h-[calc(100vh-60px)] bg-[#121212] lg:hidden flex items-center justify-center">
+            <ul class="h-full flex flex-col gap-2 justify-around items-start m-auto">
+                <li class="cursor-pointer flex flex-row gap-2 items-center justify-center text-2xl" [routerLink]="['/temporada', 1]" (click)="isMenuOpen = false">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                      </svg>
+                    Home
+                </li>
+                <li class="cursor-pointer flex flex-row gap-2 items-center justify-center text-2xl " [routerLink]="['/projects']">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 12v1h4v-1m4 7H6a1 1 0 0 1-1-1V9h14v9a1 1 0 0 1-1 1ZM4 5h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
+                      </svg>
+                    Proyectos
+                </li>
+            </ul>
+        </div>
+    }
+    
+</div>

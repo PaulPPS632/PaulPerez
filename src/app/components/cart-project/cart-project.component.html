@@ -1,0 +1,30 @@
+@if (project) {
+<div class="w-[340px] md:w-[600px]">
+  <!-- Proyecto Información -->
+  <div class="cantainer-imagen relative w-full h-56 md:h-[350px] border border-white rounded-md bg-[#121212]">
+    <div class="absolute top-3 left-3 hover:top-0 hover:left-0 cursor-pointer h-full w-full rounded-md flex items-center justify-center"
+    [routerLink]="['/project', project.name]"
+    >
+      <img class="imagen-project h-full object-cover rounded-md transition-all" [src]="project.image" alt="">
+      <span class="absolute z-30 font-bold text-4xl">{{project.name}}</span>
+    </div>
+  </div>
+  <div class="w-full container-description border border-blue-950 rounded-md flex flex-col flex-nowrap gap-6 p-4">
+    <p>{{ project.description }}</p>
+  
+    <!-- Tecnologías -->
+    <div class="flex flex-row gap-4 items-center justify-start">
+      @for (tech of project.technologies; track $index) {
+      <ng-container>
+        <ng-container  *ngIf="getTechnologyComponent(tech) as TechComponent">
+          <div >
+            <ng-container *ngComponentOutlet="TechComponent" ></ng-container>
+          </div>
+        </ng-container>
+      </ng-container>
+      }
+    </div>
+  </div>
+  
+</div>
+}

@@ -1,0 +1,46 @@
+
+<div class="w-full flex flex-row flex-wrap items-center justify-center pt-20">
+  <div class="w-52 md:w-96">
+    <img
+      class="w-full object-contain imagen-perfil"
+      src="yo.png"
+      alt="imagen de perfil"
+    />
+  </div>
+  <div class="p-4">
+    <h1 class="font-bold text-4xl mb-4">Paul Perez</h1>
+    <p>
+      ¡Hola! Soy un desarrollador web full stack con experiencia en crear soluciones prácticas y eficientes.
+    </p>
+    <br />
+    <p>Hablemos y agamos realidad eso que estas pensando.</p>
+  </div>
+</div>
+<article class="my-10">
+    <header>
+        <h2 class="text-2xl font-semibold ml-5 md:ml-20">Technologias</h2>
+    </header>
+    <main class="w-full flex flex-row flex-wrap gap-6 items-center justify-center my-20 px-10">
+        <div class="flex flex-row flex-wrap gap-6 items-center justify-start">
+            @for (tech of technologies; track $index) {
+            <ng-container>
+              <ng-container  *ngIf="getTechnologyComponent(tech.label) as TechComponent">
+                <div class="hover:scale-125 transition-all">
+                  <ng-container *ngComponentOutlet="TechComponent" ></ng-container>
+                </div>
+              </ng-container>
+            </ng-container>
+            }
+          </div>
+    </main>
+</article>
+<article class="my-10">
+    <header>
+        <h2 class="text-2xl font-semibold ml-5 md:ml-20">Proyectos</h2>
+    </header>
+    <main class="w-full flex flex-row flex-wrap gap-6 items-center justify-center my-20 px-10">
+        @for (project of projects; track $index) {
+            <app-cart-project [project]="project"/>
+        }
+    </main>
+</article>

@@ -36,5 +36,14 @@ export const PROJECTS: Project[] = [
         url:'https://got-v2.vercel.app/',
         git:'https://github.com/PaulPPS632/GOT-V2',
         technologies:['Angular', 'TailwindCSS', 'TypeScript']
+    },
+    {
+        name:'Abit',
+        description:'A website where you can add habits and track your progress.',
+        HowWasDone:'I developed this web application using Angular, and Angular Cdk for drag and drop, I also used a library for managing uuids',
+        image:'Abit.webp',
+        url:'https://abit-ten.vercel.app',
+        git:'https://github.com/PaulPPS632/abit',
+        technologies:['Angular', 'TailwindCSS', 'TypeScript']
     }
 ]

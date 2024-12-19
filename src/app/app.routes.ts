@@ -15,8 +15,15 @@ export const routes: Routes = [
             {
                 path:'project/:nombre',
                 loadComponent: () => import('./pages/project/project.component').then((m) => m.ProjectComponent)
+            },
+            {
+                path:'contact',
+                loadComponent: () => import('./pages/contact/contact.component').then((m) => m.ContactComponent)
             }
         ]
     },
-    
+    {
+        path:'**',
+        redirectTo:''
+    }
 ];

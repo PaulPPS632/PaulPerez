@@ -1,7 +1,8 @@
 
 
 <article class="relative flex flex-col md:flex-row max-w-screen-2xl m-auto pt-16 min-h-screen">
-    <aside class="w-full md:w-[700px] bg-[#121212] p-4 flex flex-col gap-4">
+    <aside class="w-full md:w-[700px] bg-[#121212]/80 p-4 flex flex-col gap-10">
+        <h1 class="text-2xl font-bold mb-1">{{Projecto?.name}}</h1>
         <div>
             <h2 class="text-xl font-bold mb-4">
                 Sobre el Proyecto
@@ -54,7 +55,6 @@
         </div>
     </aside>
     <main class="p-4 w-full">
-        <h1 class="text-2xl font-bold mb-6">{{Projecto?.name}}</h1>
         <div class="w-full">
             <img [src]="Projecto?.image" alt="">
         </div>

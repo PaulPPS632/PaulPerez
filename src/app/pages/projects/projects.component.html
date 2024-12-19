@@ -1,8 +1,8 @@
 <article class="pt-24">
     <header>
-        <h2 class="text-2xl font-semibold ml-5 md:ml-20">Proyectos</h2>
+        <h2 class="text-3xl font-semibold ml-5 md:ml-20">Proyectos</h2>
     </header>
-    <main class="w-full flex flex-row flex-wrap gap-6 items-center justify-center">
+    <main class="w-full flex flex-row flex-wrap gap-6 items-center justify-center my-10">
         @for (project of projects; track $index) {
             <app-cart-project [project]="project"/>
         }

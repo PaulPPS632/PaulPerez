@@ -1,0 +1,27 @@
+<form action="Send" class="w-[340px] md:w-[700px] min-h-[450px] flex flex-col items-end justify-evenly gap-1  backblur rounded-md p-4 border border-blue-950">
+  <div class="w-full">
+    <label class="block " for="nombre">Nombre:</label>
+    <input
+    class="w-full h-10 bg-[#181818] rounded-md border border-blue-950  focus:border-blue-900 focus:outline-none  pl-2 ring-0"
+    type="text" name="nombre" id="nombre" [(ngModel)]="Message.from_name" 
+    placeholder=""
+    />
+  </div>
+  <div class="w-full">
+    <label class="block" for="asunto">Asunto:</label>
+    <select class="w-full h-10 bg-[#181818] border border-blue-950 focus:border-blue-900 focus:outline-none rounded-md pl-2" name="asunto" id="asunto" [(ngModel)]="Message.subject">
+        <option class="hover:bg-[#303030]" value="Consulta sobre desarrollo web personalizado" selected>Consulta sobre desarrollo web personalizado</option>
+        <option value="Cotización de servicios">Cotización de servicios</option>
+        <option value="Propuesta de proyecto">Propuesta de proyecto</option>
+        <option value="Trabaja conmigo">Trabaja conmigo</option>
+        <option value="Soporte o mantenimiento de sitio web">Soporte o mantenimiento de sitio web</option>
+    </select>
+  </div>
+  <div class="w-full h-fit">
+    <label class="block" for="mensaje">Mensaje:</label>
+    <textarea class="MessageTexArea w-full min-h-36 bg-[#181818] border border-blue-950 focus:border-blue-900 focus:outline-none rounded-md p-2" name="mensaje" id="mensaje" [(ngModel)]="Message.message"></textarea>
+  </div>
+  <div class="">
+    <button type="submit" class="w-60 py-2 px-4 bg-blue-950 hover:bg-blue-900 rounded-md hover:scale-105 transition-all" (click)="Send()">Enviar</button>
+  </div>
+</form>

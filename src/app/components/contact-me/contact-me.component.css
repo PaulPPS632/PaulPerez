@@ -1,0 +1,6 @@
+.backblur{
+    backdrop-filter: blur(5px);
+}
+.MessageTexArea{
+    field-sizing: content;
+}

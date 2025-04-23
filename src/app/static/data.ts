@@ -74,5 +74,14 @@ export const PROJECTS: Project[] = [
         url:'https://workoutflow-system.vercel.app',
         git:'https://github.com/PaulPPS632/workoutflow-system.git',
         technologies:['Nextjs','Vite', 'TailwindCSS', 'TypeScript', 'Nodejs', 'Expressjs']
-    }
+    },//https://digital-college-livid.vercel.app
+    {
+        name:'Digital COllege',
+        description:`Es una plataforma elearning para digital college`,
+        HowWasDone:'',
+        image:'DigitalCollege.webp',
+        url:'https://digital-college-livid.vercel.app',
+        git:'',
+        technologies:['Angular','Vite', 'TailwindCSS', 'TypeScript', 'Nodejs', 'Expressjs']
+    },
 ]
